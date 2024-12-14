@@ -1,0 +1,67 @@
+  =================
+   Message Summary
+  =================
+------------------------------------------------------------------------------------------------------------------
+|    Id     |  Sev   |Count |                                   Message Text                                     |
+------------------------------------------------------------------------------------------------------------------
+| CDFG-818  |Warning |    1 |Using default parameter value for module elaboration.                               |
+| LBR-9     |Warning |   20 |Library cell has no output pins defined.                                            |
+|           |        |      |Add the missing output pin(s)                                                       |
+|           |        |      | , then reload the library. Else the library cell will be marked as timing model    |
+|           |        |      | i.e. unusable. Timing_model means that the cell does not have any defined          |
+|           |        |      | function. If there is no output pin, Genus will mark library cell as unusable i.e. |
+|           |        |      | the attribute 'usable' will be marked to 'false' on the libcell. Therefore, the    |
+|           |        |      | cell is not used for mapping and it will not be picked up from the library for     |
+|           |        |      | synthesis. If you query the attribute 'unusable_reason' on the libcell; result     |
+|           |        |      | will be: 'Library cell has no output pins.'Note: The message LBR-9 is only for the |
+|           |        |      | logical pins and not for the power_ground pins. Genus will depend upon the output  |
+|           |        |      | function defined in the pin group (output pin)                                     |
+|           |        |      | of the cell, to use it for mapping. The pg_pin will not have any function defined. |
+| LBR-76    |Warning |   30 |Detected both combinational and sequential timing arcs in a library cell. This      |
+|           |        |      | might prevent the tool from using this cell for technology mapping. The tool will  |
+|           |        |      | treat it as unusable.                                                              |
+|           |        |      |The library cell will be treated as a timing-model. Make sure that the timing arcs  |
+|           |        |      | and output function are defined correctly. Even if the cell intends to have        |
+|           |        |      | dual-functionality, it cannot be unmapped or automatically inferred.               |
+| LBR-702   |Warning |    6 |Missing pg_pin group in the library.                                                |
+| PHYS-12   |Warning |    3 |The variant range of wire parameters is too large. An example of wire parameters    |
+|           |        |      | are, a WIDTH for layer, PITCH for layer, MINSPACING for layers, etc.               |
+|           |        |      |Check the consistency of the parameters, and see if you can ignore this message or  |
+|           |        |      | you're using different LEF file with wrong parameters.                             |
+| PHYS-20   |Warning |    1 |None of the loaded LEF files have MACRO statements.                                 |
+|           |        |      |The LEF file containing the cell specific information was not loaded. The LEF MACRO |
+|           |        |      | construct is used to set the physical data on cells in the timing library. It is   |
+|           |        |      | likely that only the technology LEF file was loaded. Load all the associated LEF   |
+|           |        |      | files.                                                                             |
+| PHYS-1011 |Warning |    1 |Attribute design_process_node is not set for this design.                           |
+|           |        |      |When attribute design_process_node is not set to an appropriate integer value >=5   |
+|           |        |      | and <=250, then Innovus will assume its own default value for the design process   |
+|           |        |      | node. See the Innovus setDesignMode -process <> command for more information about |
+|           |        |      | what this setting does.                                                            |
+| RPT_CG-12 |Warning |    3 |Potential error generating clock gating report.                                     |
+|           |        |      |The 'report clock_gating' command depends on the 'lp_insert_clock_gating'           |
+|           |        |      | attribute.  Set it to 'true' before calling this command.                          |
+| SDC-201   |Warning |    1 |Unsupported SDC command option.                                                     |
+|           |        |      |The current version does not support this SDC command option.  However, future      |
+|           |        |      | versions may be enhanced to support this option.                                   |
+| TUI-738   |Warning |    1 |Timing analysis will be done by mode.                                               |
+|           |        |      |Worst paths will be shown in each mode for all modes.                               |
+| VLOGPT-37 |Warning |    1 |Ignoring unsynthesizable construct.                                                 |
+|           |        |      |For example, the following constructs will be ignored:
+    - initial block
+    -    |
+|           |        |      | final block
+    - program block
+    - property block
+    - sequence block
+    -    |
+|           |        |      | covergroup
+    - checker block
+    - gate drive strength
+    - system task enable
+ |
+|           |        |      | - reg declaration with initial value
+    - specify block.                          |
+| WSDF-104  |Warning |    2 |Default value for an option has changed in this release.                            |
+|           |        |      |Specify the option explicitly.                                                      |
+------------------------------------------------------------------------------------------------------------------
